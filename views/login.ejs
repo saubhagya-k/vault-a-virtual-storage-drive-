@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link  rel="stylesheet" href="/index.css">
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body >
+  <style>
+    html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; 
+        }
+  </style>
+     
+    <div class="h-screen flex justify-center items-center ">
+    <div class="form-container ">
+    <h2>Login</h2>
+    <form action="/home/login" method="POST">
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+  </div>
+  </div>
+
+
+
+    
+</body>
+</html>
