@@ -64,20 +64,7 @@ const firstRouter = require("./routes/first-router")
 app.use('/home',homeRouter)
 app.use('/',firstRouter)
 
-const startServer = async () => {
-  try {
-    await connectDB(); // ← This should work now
-    app.listen(3000, () => {
-      console.log("Server is listening at port number 3000");
-    });
-  } catch (error) {
-    console.error('Failed to start server:', error);
-  }
-};
-
-
-
-const startServer = async () => {
+const ok = async () => {
   try {
     await connectDB(); // ← Connect to MongoDB first
 
@@ -90,11 +77,4 @@ const startServer = async () => {
   }
 };
 
-startServer();
-
-
-
-
-
-
-
+ok();
