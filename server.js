@@ -76,5 +76,23 @@ const startServer = async () => {
 };
 
 
+
+const startServer = async () => {
+  try {
+    await connectDB(); // ← Connect to MongoDB first
+
+    const PORT = process.env.PORT || 3000; // Use Render's port OR fallback to 3000 locally
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`Server is listening on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error('Failed to start server:', error);
+  }
+};
+
 startServer();
+
+
+
+
 
