@@ -57,6 +57,16 @@ const authMiddleware = async (req, res, next) => {
 app.use(authMiddleware);
 
 
+app.get('/', (req, res) => {
+  // If user is already logged in, take them to files page
+  if (req.user) {
+    return res.redirect('/home/get-rows');
+  }
+  // If not logged in, take them to register page
+  res.redirect('/home/register');
+});
+
+
 const homeRouter = require('./routes/home-route')
 const firstRouter = require("./routes/first-router")
 
